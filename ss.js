@@ -22,36 +22,59 @@ let feedback3 = document.getElementById("feedback3");
 let feedback4 = document.getElementById("feedback4");
 let feedback5 = document.getElementById("feedback5");
 
+function start() {document.getElementById("kettu").style.display = "block"};
 
 function v1(){
     document.getElementById("feedback1").textContent = ""; //tyhjäys
     if (right1.checked == true){feedback1.textContent = OIKEA1;}
     else {feedback1.textContent = VÄÄRÄ;}
-     //TÄÄ Nyt toimii jotenkin, kun oieka tai väärä valittu
-    //else {feedback1.textContent = VÄÄRÄ; }
-    // if (right1 == "") { feedback1.textContent = PUUTTUU;}
-    //if (right1.checked == false && wrong == "" ) {feedback1.textContent = PUUTTUU;}KOKEILU JOS SAIS TÄN MUTTEI TOIMI
+
+    document.getElementById("seuraava2").onclick = function(){
+        document.getElementById("kettu").style.display ="none";
+        document.getElementById("karhu").style.display ="block";
+    }
 }
 
 function v2(){
     document.getElementById("feedback2").textContent = ""; //tyhjäys
     if (right2.checked == true){feedback2.textContent = OIKEA2;}
     else {feedback2.textContent = VÄÄRÄ;}
-    }
 
-    function v3(){
-        document.getElementById("feedback3").textContent = ""; //tyhjäys
-        if (right3.checked == true){feedback3.textContent = OIKEA3;}
-        else {feedback3.textContent = VÄÄRÄ;}
-        } 
+    document.getElementById("seuraava3").onclick = function(){
+        document.getElementById("karhu").style.display ="none";
+        document.getElementById("orava").style.display ="block";
+    }
+}
+
+function v3(){
+    document.getElementById("feedback3").textContent = ""; //tyhjäys
+    if (right3.checked == true){feedback3.textContent = OIKEA3;}
+    else {feedback3.textContent = VÄÄRÄ;}
+
+    document.getElementById("seuraava4").onclick = function(){
+    document.getElementById("orava").style.display ="none";
+    document.getElementById("ilves").style.display ="block";
+    }
+} 
 function v4(){
     document.getElementById("feedback4").textContent = ""; //tyhjäys
     if (right4.checked == true){feedback4.textContent = OIKEA4;}
     else {feedback4.textContent = VÄÄRÄ;}
+
+    document.getElementById("seuraava5").onclick = function(){
+    document.getElementById("ilves").style.display ="none";
+    document.getElementById("jänis").style.display ="block";
     }
+}
 
 function v5(){
     document.getElementById("feedback5").textContent = ""; //tyhjäys
     if (right5.checked == true){feedback5.textContent = OIKEA5;}
     else {feedback5.textContent = VÄÄRÄ;}
-    }
+
+    document.getElementById("seuraava1").onclick = function(){
+    document.getElementById("jänis").style.display ="none";
+     document.getElementById("kettu").style.display ="block";
+        }
+    //tai tekisikö tähän vaihtoehdon että uudestaan tai lopetus ja siihen sitten lopputilanne? pitää muutes rakentaa että tyhjentää vielä kaikki jos alkaa alusta.
+}

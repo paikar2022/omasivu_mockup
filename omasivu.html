@@ -49,68 +49,70 @@
     </header>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12" id="kettu"> 
-                <p>Kuva 1/5</p>
-                <img src="./elaintietoimages/fox.jpg" class="kuva" alt="fox"><br>
-                <input type="radio" name="answer" class="wrong"> Kissa<br>
-                <input type="radio" name="answer" id="right1"> Kettu<br>
-                <input type="radio" name="answer" class="wrong"> Ahma<br>
-                <input type="radio" name="answer" class="wrong"> Kojootti<br>
-                <button id="tarkista1" class="button" onclick="v1()">Tarkista</button>
-                <p id="feedback1"></p>
-            </div>
-            <div class="col-md-12 col-sm-12" id="karhu">
-                <p>Kuva 2/5</p>
-                <img src="./elaintietoimages/bear.jpg" class="kuva" alt="bear"><br>
-                <input type="radio" name="answer"  class="wrong"> Ahma<br>
-                <input type="radio" name="answer"  class="wrong"> Panda<br>
-                <input type="radio" name="answer"  class="wrong"> Kissa<br>
-                <input type="radio" name="answer" id="right2"> Karhu<br>
-                <button id="tarkista2" class="button" onclick="v2()">Tarkista</button>
-                <p id="feedback2"></p>
-            </div>
-        <div class="row">
 
-            <div class="col-md-12 col-sm-12"id="orava" > 
-                <p>Kuva 3/5</p>
-                <img src="./elaintietoimages/squirrel.jpg" class="kuva" alt="squirrel"><br>
-                <input type="radio" name="answer" class="wrong"> Marsu<br>
-                <input type="radio" name="answer" class="wrong"> Norsu<br>
-                <input type="radio" name="answer" id="right3"> Orava<br>
-                <input type="radio" name="answer" class="wrong"> Kojootti<br>
-                <button id="tarkista3" class="button" onclick="v3()">Tarkista</button> 
-                <p id="feedback3"></p>
-            </div>        
+        <button id="aloitusnappi" onclick="start()">Aloita</button>
 
-            <div class="col-md-12 col-sm-12"id="ilves">
-                <p>Kuva 4/5</p>
-                <img src="./elaintietoimages/lynx.jpg"   class="kuva" alt="lynx"><br>
-                <input type="radio" name="answer" class="wrong"> Pantteri<br>
-                <input type="radio" name="answer" id="right4"> Ilves<br>
-                <input type="radio" name="answer" class="wrong"> Kani<br>
-                <input type="radio" name="answer" class="wrong"> Kettu<br>
-                <button id="tarkista4" class="button" onclick="v4()">Tarkista</button>
-                <p id="feedback4"></p>
-            </div>
+        <div class="col-md-12 col-sm-12" id="kettu"> 
+            <p>Kuva 1/5</p>
+            <img src="./elaintietoimages/fox.jpg" class="kuva" alt="fox"><br>
+            <input type="radio" name="answer" class="wrong"> Kissa<br>
+            <input type="radio" name="answer" id="right1"> Kettu<br>
+            <input type="radio" name="answer" class="wrong"> Ahma<br>
+            <input type="radio" name="answer" class="wrong"> Kojootti<br>
+            <button id="tarkista1" class="button" onclick="v1()">Tarkista</button>
+            <p id="feedback1"></p>
+            <button id="seuraava2" onclick="next2()">Seuraava</button>
+        </div>   
+
+        <div class="col-md-12 col-sm-12" id="karhu">
+            <p>Kuva 2/5</p>
+            <img src="./elaintietoimages/bear.jpg" class="kuva" alt="bear"><br>
+            <input type="radio" name="answer"  class="wrong"> Ahma<br>
+            <input type="radio" name="answer"  class="wrong"> Panda<br>
+            <input type="radio" name="answer"  class="wrong"> Kissa<br>
+            <input type="radio" name="answer" id="right2"> Karhu<br>
+            <button id="tarkista2" class="button" onclick="v2()">Tarkista</button>
+            <p id="feedback2"></p>
+            <button id="seuraava3" onclick="next3()">Seuraava</button>
+        </div>    
+
+        <div class="col-md-12 col-sm-12"id="orava" > 
+            <p>Kuva 3/5</p>
+            <img src="./elaintietoimages/squirrel.jpg" class="kuva" alt="squirrel"><br>
+            <input type="radio" name="answer" class="wrong"> Marsu<br>
+            <input type="radio" name="answer" class="wrong"> Norsu<br>
+            <input type="radio" name="answer" id="right3"> Orava<br>
+            <input type="radio" name="answer" class="wrong"> Kojootti<br>
+            <button id="tarkista3" class="button" onclick="v3()">Tarkista</button> 
+            <p id="feedback3"></p>
+            <button id="seuraava4" onclick="next4()">Seuraava</button>
+        </div>     
+
+        <div class="col-md-12 col-sm-12"id="ilves">
+            <p>Kuva 4/5</p>
+            <img src="./elaintietoimages/lynx.jpg"   class="kuva" alt="lynx"><br>
+            <input type="radio" name="answer" class="wrong"> Pantteri<br>
+            <input type="radio" name="answer" id="right4"> Ilves<br>
+            <input type="radio" name="answer" class="wrong"> Kani<br>
+            <input type="radio" name="answer" class="wrong"> Kettu<br>
+            <button id="tarkista4" class="button" onclick="v4()">Tarkista</button>
+            <p id="feedback4"></p>
+            <button id="seuraava5" onclick="next5()">Seuraava</button>
         </div>
-        
-        <div class="row">
-            <div class="col-md-12 col-sm-12"id="jänis" >
-                <p>Kuva 5/5</p>
-                <img src="./elaintietoimages/hare.jpg"  class="kuva" alt="hare"><br>
-                <input type="radio" name="answer" id="right5"> Jänis<br>
-                <input type="radio" name="answer" class="wrong"> Hiiri<br>
-                <input type="radio" name="answer" class="wrong"> Villisika<br>
-                <input type="radio" name="answer" class="wrong"> Mursu<br>
-                <button id="tarkista5" class="button" onclick="v5()">Tarkista</button>
-                <p id="feedback5"></p>
-            </div> 
-        </div>
-       
+
+        <div class="col-md-12 col-sm-12"id="jänis" >
+            <p>Kuva 5/5</p>
+            <img src="./elaintietoimages/hare.jpg"  class="kuva" alt="hare"><br>
+            <input type="radio" name="answer" id="right5"> Jänis<br>
+            <input type="radio" name="answer" class="wrong"> Hiiri<br>
+            <input type="radio" name="answer" class="wrong"> Villisika<br>
+            <input type="radio" name="answer" class="wrong"> Mursu<br>
+            <button id="tarkista5" class="button" onclick="v5()">Tarkista</button>
+            <p id="feedback5"></p>
+            <button id="seuraava1" class="seuraava" onclick="next1()">Seuraava</button>
+        </div>    
+
     </div>
-
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
