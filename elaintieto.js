@@ -22,8 +22,6 @@ let feedback3 = document.getElementById("feedback3");
 let feedback4 = document.getElementById("feedback4");
 let feedback5 = document.getElementById("feedback5");
 
-// document.getElementById("progressBar").style.display = "none";
-
 function start() {
     feedback1.textContent = "";
     document.getElementById("kettu").style.display = "block";
@@ -103,47 +101,17 @@ function v5(){
     if (right5.checked == true){feedback5.textContent = OIKEA5;
         document.getElementById("tarkista5").style.display = "none";
         document.getElementById("fifthBlock").style.display = "block";
-
+        document.getElementById("tulos").style.display = "block";
     }
     else {feedback5.textContent = VÄÄRÄ;}
 
-    document.getElementById("tulos").style.display = "block";
     document.getElementById("tulos").onclick = function(){
         document.getElementById("jänis").style.display ="none";
         document.getElementById("prize").style.display ="block";
     }    
 
     document.getElementById("uudestaan").onclick = function(){
-        feedback1.textContent = "";    
-        document.getElementById("prize").style.display = "none";
-        document.getElementById("progress").style.display = "none";
-        document.getElementById("progressBar").style.display = "none";
-        document.getElementById("kettu").style.display ="block";
+        feedback1.textContent = "";   
+        location.reload(); //w3schools neuvon mukaan palauttaa alkuun, lataa sivun uudestaan-> toimii!
         }
 }
-
-
-
-//testing array
-// let fox = document.getElementById("fox");
-// let bear = document.getElementById("bear");
-// let squirrel= document.getElementById("squirrel");
-// let lynx = document.getElementById("lynx");
-// let hare = document.getElementById("hare");
-
-
-// function randomQuestion(min, max){
-//     return Math.floor(Math.random() * (max - min +1) ) + min;
-// }
-
-// let questionsMin = Number(1);
-// let questionsMax = Number(questionsArray.length);
-// let newArray = new Array();
-
-
-// for (let questionsArray = [fox, bear, squirrel, lynx, hare], i = questionsArray.length; i--; ) {
-//     let random = questionsArray.splice(Math.floor(Math.random() * i),1)[0];
-//     document.getElementById("random").innerHTML += random++ + " ";
-// }
-
-
