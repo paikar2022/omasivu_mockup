@@ -22,19 +22,25 @@ let feedback3 = document.getElementById("feedback3");
 let feedback4 = document.getElementById("feedback4");
 let feedback5 = document.getElementById("feedback5");
 
+// document.getElementById("progressBar").style.display = "none";
+
 function start() {
+    feedback1.textContent = "";
     document.getElementById("kettu").style.display = "block";
     document.getElementById("header").style.display = "none";
     document.getElementById("aloitusnappi").style.display = "none";
     document.getElementById("seuraava2").style.display = "none";
-    document.getElementsByClassName("feedback").textContent = "";
+    
 }
 
 function v1(){
-    document.getElementsByClassName("feedback").textContent = ""; //tyhjäys
+    feedback1.textContent = ""; //tyhjäys
     if (right1.checked == true){feedback1.textContent = OIKEA1;
         document.getElementById("seuraava2").style.display = "block";
         document.getElementById("tarkista1").style.display = "none";
+        document.getElementById("progressBar").style.display = "block";
+        document.getElementById("firstBlock").style.display = "block";
+        document.getElementById("progress").style.display = "block";
     }
     else {feedback1.textContent = VÄÄRÄ;}
 
@@ -46,10 +52,11 @@ function v1(){
 }
 
 function v2(){
-    document.getElementsByClassName("feedback").textContent = ""; //tyhjäys
+    feedback2.textContent = ""; //tyhjäys
     if (right2.checked == true){feedback2.textContent = OIKEA2;
         document.getElementById("seuraava3").style.display = "block";
         document.getElementById("tarkista2").style.display = "none";
+        document.getElementById("secondBlock").style.display = "block";
     }
     else {feedback2.textContent = VÄÄRÄ;}
 
@@ -61,11 +68,11 @@ function v2(){
 }
 
 function v3(){
-    document.getElementsByClassName("feedback").textContent = ""; //tyhjäys
+    feedback3.textContent = ""; //tyhjäys
     if (right3.checked == true){feedback3.textContent = OIKEA3;
         document.getElementById("seuraava4").style.display = "block";
         document.getElementById("tarkista3").style.display = "none";
-    
+        document.getElementById("thirdBlock").style.display = "block";
     }
     else {feedback3.textContent = VÄÄRÄ;}
 
@@ -76,35 +83,46 @@ function v3(){
     }
 } 
 function v4(){
-    document.getElementsByClassName("feedback").textContent = ""; //tyhjäys
+    feedback4.textContent = ""; //tyhjäys
     if (right4.checked == true){feedback4.textContent = OIKEA4;
         document.getElementById("seuraava5").style.display = "block";
         document.getElementById("tarkista4").style.display = "none";
-    
+        document.getElementById("fourthBlock").style.display = "block";
     }
     else {feedback4.textContent = VÄÄRÄ;}
 
     document.getElementById("seuraava5").onclick = function(){
     document.getElementById("ilves").style.display ="none";
     document.getElementById("jänis").style.display ="block";
-    document.getElementById("uudestaan").style.display = "none";
+    document.getElementById("tulos").style.display = "none";
     }
 }
 
 function v5(){
-    document.getElementsByClassName("feedback").textContent = ""; //tyhjäys
+    feedback5.textContent = ""; //tyhjäys
     if (right5.checked == true){feedback5.textContent = OIKEA5;
-        document.getElementById("uudestaan").style.display = "block";
         document.getElementById("tarkista5").style.display = "none";
+        document.getElementById("fifthBlock").style.display = "block";
+
     }
     else {feedback5.textContent = VÄÄRÄ;}
 
+    document.getElementById("tulos").style.display = "block";
+    document.getElementById("tulos").onclick = function(){
+        document.getElementById("jänis").style.display ="none";
+        document.getElementById("prize").style.display ="block";
+    }    
+
     document.getElementById("uudestaan").onclick = function(){
-    document.getElementById("jänis").style.display ="none";
-    document.getElementById("kettu").style.display ="block";
-    
+        feedback1.textContent = "";    
+        document.getElementById("prize").style.display = "none";
+        document.getElementById("progress").style.display = "none";
+        document.getElementById("progressBar").style.display = "none";
+        document.getElementById("kettu").style.display ="block";
         }
 }
+
+
 
 //testing array
 // let fox = document.getElementById("fox");

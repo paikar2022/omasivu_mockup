@@ -50,24 +50,18 @@
 
         
         <div class="col-md-12 col-sm-12" id="kettu"> 
-            <table>   
-                <tr>   
-                    <td> 
+            
                         <img src="./elaintietoimages/fox.jpg" class="kuva" alt="fox">
-                    </td>
-                    <td>
+                    
                         <input type="radio" name="answer" class="wrong"> Kissa<br>
                         <input type="radio" name="answer" id="right1"> Kettu<br>
                         <input type="radio" name="answer" class="wrong"> Ahma<br>
                         <input type="radio" name="answer" class="wrong"> Kojootti<br>
                         <button id="tarkista1" class="button" onclick="v1()">Tarkista</button>
-                        <td>
-                            <p id="feedback1" class="feedback"></p>
-                        </td>
-                        <td>
-                            <button id="seuraava2" onclick="next2()">Seuraava</button>
-                        </td>   
-        </div> </tr></table>
+                        <p id="feedback1" class="feedback"></p>
+                        <button id="seuraava2" onclick="next2()">Seuraava</button>
+                        
+        </div> 
 
         <div class="col-md-12 col-sm-12" id="karhu">
             <img src="./elaintietoimages/bear.jpg" class="kuva" alt="bear"><br>
@@ -110,9 +104,35 @@
             <input type="radio" name="answer" class="wrong"> Mursu<br>
             <button id="tarkista5" class="button" onclick="v5()">Tarkista</button>
             <p id="feedback5"class="feedback"></p>
-            <button id="uudestaan" class="uudestaan" onclick="again()">Aloita alusta</button>
-        </div>    
+            <button id="tulos" class="tulos" onclick="again()">Katso tulos</button>
+        </div>  
+        <label for="progress" id="progress">Edistyminen:</label>
+        <table id="progressBar">
+            <tr>
+                <td id="firstBlock" class="block"></td>
+                <td id="secondBlock" class="block"></td>
+                <td id="thirdBlock"class="block" ></td>
+                <td id="fourthBlock" class="block"></td>
+                <td id="fifthBlock" class="block"></td>
+            </tr>
+        </table>
+        <table id="testBar">
+            <tr>
+                <td id="firstBlock" class="block"></td>
+                <td id="secondBlock" class="block"></td>
+                <td id="thirdBlock"class="block" ></td>
+                <td id="fourthBlock" class="block"></td>
+                <td id="fifthBlock" class="block"></td>
+            </tr>
+        </table>
 
+            <div class="col-md-12 col-sm-12"id="prize" >
+                <img src="./elaintietoimages/bear.jpg" class="kuva" alt="bear">
+                <img src="./elaintietoimages/lynx.jpg"   class="kuva" alt="lynx">
+                <img src="./elaintietoimages/squirrel.jpg" class="kuva" alt="squirrel">
+                <p id="feedbackEnd"> Hienoa! Sait kaikki oikein.</p>
+                <button id="uudestaan" class="uudestaan" onclick="again()">Aloita alusta</button>
+            </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
